@@ -49,7 +49,7 @@ class WandbSummaryWriter(SummaryWriter):
         wandb.config.update({"runner_cfg": runner_cfg})
         wandb.config.update({"policy_cfg": policy_cfg})
         wandb.config.update({"alg_cfg": alg_cfg})
-        wandb.config.update({"env_cfg": asdict(env_cfg)})
+        wandb.config.update({"env_cfg": env_cfg})
 
     def _map_path(self, path):
         if path in self.name_map:
